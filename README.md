@@ -1,25 +1,39 @@
-Tetris — A robust static web app
+Tetris – A simple vanilla JS clone for GitHub Pages
+===============================================
 
 Overview
-- A classic Tetris-inspired game built as a static web app that can be deployed on GitHub Pages.
-- Fully client-side, no server dependencies.
-- MIT licensed (see LICENSE).
+- A minimal, self-contained Tetris game implemented with HTML5 canvas and vanilla JavaScript.
+- No build step required. Just open index.html in a browser (or host on GitHub Pages).
+- Features: move/rotate, soft/hard drop, pause, restart, score/lines/level, next piece preview, game over state with restart.
 
-Live demo
-- This repository is designed to run directly in GitHub Pages. Open the repo URL and you should see the Tetris game.
+Files at a glance
+- index.html: Entry page with a canvas-based game area.
+- style.css: UI styling and layout for the game board, HUD, next piece preview, and overlays.
+- script.js: Core game logic (spawn, move, rotate, lock, clear lines, scoring, rendering).
+- LICENSE: MIT license file.
+- README.md: This file.
 
-How to run locally
-- Open index.html in your browser or use a simple static HTTP server.
+How to run
+- Open index.html in any modern browser. No server required.
+- GitHub Pages: create a repository and enable Pages to serve from main branch / root.
 
-How to deploy to GitHub Pages
-- Create a new repository, push these files, and enable GitHub Pages (master/main branch or /docs folder as per your config).
+Usage / Controls
+- ArrowLeft / ArrowRight: move left/right
+- ArrowDown: soft drop
+- ArrowUp: rotate
+- Space: hard drop
+- P: pause/resume
+- R: restart
 
-Design notes
-- The app provides a self-contained Tetris-like game with falling blocks, rotation, scoring, leveling, and a small next-piece preview.
-- Keyboard controls: Arrow keys to move/rotate, Space for hard drop, P to pause.
+Game rules and scoring
+- 10x20 board, 7 tetromino shapes
+- When a line is completely filled, it clears and you gain score.
+- Level increases as you clear 10 lines; faster drops with higher level.
+- Game over occurs when a new piece cannot be placed.
 
-Contact
-- Email: student@example.com
+Code design notes
+- This is a compact, readable implementation focused on clarity for learning and for deployment on GitHub Pages.
+- All assets are embedded; no dependencies.
 
 License
-- MIT. See LICENSE file for full terms.
+- MIT License. See LICENSE at repo root.
